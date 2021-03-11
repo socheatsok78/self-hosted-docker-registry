@@ -11,5 +11,7 @@ services:
       # REGISTRY_HTTP_ADDR: "0.0.0.0:5001"
     volumes:
       - ./storage/registry:/var/lib/registry
+    depends_on:
+      - redis
   redis:
     image: redis:6.2.1-alpine
